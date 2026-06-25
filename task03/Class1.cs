@@ -11,11 +11,9 @@ public class CustomCollection<T> : IEnumerable<T>
     
     public int Count => _items.Count;
     
-    // Стандартный итератор
     public IEnumerator<T> GetEnumerator() => _items.GetEnumerator();
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     
-    // Итератор для обратного обхода
     public IEnumerable<T> GetReverseEnumerator()
     {
         for (int i = _items.Count - 1; i >= 0; i--)
@@ -24,7 +22,6 @@ public class CustomCollection<T> : IEnumerable<T>
         }
     }
     
-    // Генерация числовой последовательности
     public static IEnumerable<int> GenerateSequence(int start, int count)
     {
         for (int i = 0; i < count; i++)
@@ -33,7 +30,6 @@ public class CustomCollection<T> : IEnumerable<T>
         }
     }
     
-    // Фильтрация и сортировка через LINQ
     public IEnumerable<T> FilterAndSort(Func<T, bool> predicate, Func<T, IComparable> keySelector)
     {
         return _items
@@ -41,7 +37,6 @@ public class CustomCollection<T> : IEnumerable<T>
             .OrderBy(keySelector);
     }
     
-    // Индексатор для доступа по индексу
     public T this[int index]
     {
         get => _items[index];
