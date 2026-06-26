@@ -1,0 +1,12 @@
+/home/ilya/practice2026/task04/bin/Debug/net10.0/task04.deps.json
+/home/ilya/practice2026/task04/bin/Debug/net10.0/task04.dll
+/home/ilya/practice2026/task04/bin/Debug/net10.0/task04.pdb
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.GeneratedMSBuildEditorConfig.editorconfig
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.AssemblyInfoInputs.cache
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.AssemblyInfo.cs
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.csproj.CoreCompileInputs.cache
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.sourcelink.json
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.dll
+/home/ilya/practice2026/task04/obj/Debug/net10.0/refint/task04.dll
+/home/ilya/practice2026/task04/obj/Debug/net10.0/task04.pdb
+/home/ilya/practice2026/task04/obj/Debug/net10.0/ref/task04.dll
