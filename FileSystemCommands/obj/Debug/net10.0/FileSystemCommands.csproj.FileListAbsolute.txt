@@ -1,0 +1,16 @@
+/home/ilya/practice2026/FileSystemCommands/bin/Debug/net10.0/FileSystemCommands.deps.json
+/home/ilya/practice2026/FileSystemCommands/bin/Debug/net10.0/FileSystemCommands.dll
+/home/ilya/practice2026/FileSystemCommands/bin/Debug/net10.0/FileSystemCommands.pdb
+/home/ilya/practice2026/FileSystemCommands/bin/Debug/net10.0/CommandLib.dll
+/home/ilya/practice2026/FileSystemCommands/bin/Debug/net10.0/CommandLib.pdb
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.csproj.AssemblyReference.cache
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.GeneratedMSBuildEditorConfig.editorconfig
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.AssemblyInfoInputs.cache
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.AssemblyInfo.cs
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.csproj.CoreCompileInputs.cache
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.sourcelink.json
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSyst.C5E07EE5.Up2Date
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.dll
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/refint/FileSystemCommands.dll
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/FileSystemCommands.pdb
+/home/ilya/practice2026/FileSystemCommands/obj/Debug/net10.0/ref/FileSystemCommands.dll
