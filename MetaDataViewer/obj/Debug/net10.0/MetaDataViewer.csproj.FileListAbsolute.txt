@@ -1,0 +1,15 @@
+/home/ilya/practice2026/MetaDataViewer/bin/Debug/net10.0/MetaDataViewer
+/home/ilya/practice2026/MetaDataViewer/bin/Debug/net10.0/MetaDataViewer.deps.json
+/home/ilya/practice2026/MetaDataViewer/bin/Debug/net10.0/MetaDataViewer.runtimeconfig.json
+/home/ilya/practice2026/MetaDataViewer/bin/Debug/net10.0/MetaDataViewer.dll
+/home/ilya/practice2026/MetaDataViewer/bin/Debug/net10.0/MetaDataViewer.pdb
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.GeneratedMSBuildEditorConfig.editorconfig
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.AssemblyInfoInputs.cache
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.AssemblyInfo.cs
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.csproj.CoreCompileInputs.cache
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.sourcelink.json
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.dll
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/refint/MetaDataViewer.dll
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.pdb
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/MetaDataViewer.genruntimeconfig.cache
+/home/ilya/practice2026/MetaDataViewer/obj/Debug/net10.0/ref/MetaDataViewer.dll
