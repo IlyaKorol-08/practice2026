@@ -1,0 +1,12 @@
+/home/ilya/practice2026/PluginLib/bin/Debug/net10.0/PluginLib.deps.json
+/home/ilya/practice2026/PluginLib/bin/Debug/net10.0/PluginLib.dll
+/home/ilya/practice2026/PluginLib/bin/Debug/net10.0/PluginLib.pdb
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.AssemblyInfoInputs.cache
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.AssemblyInfo.cs
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.csproj.CoreCompileInputs.cache
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.sourcelink.json
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.dll
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/refint/PluginLib.dll
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/PluginLib.pdb
+/home/ilya/practice2026/PluginLib/obj/Debug/net10.0/ref/PluginLib.dll

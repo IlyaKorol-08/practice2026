@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="MetaDataViewer/MetaDataViewer.csproj" />
-  <Project Path="task07/task07.csproj" />
-  <Project Path="task07tests/task07tests.csproj" />
+  <Project Path="PlaginRunner/PlaginRunner.csproj" />
+  <Project Path="PluginLib/PluginLib.csproj" />
+  <Project Path="task10tests/task10tests.csproj" />
 </Solution>
