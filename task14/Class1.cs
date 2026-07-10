@@ -2,6 +2,7 @@
 
 public class DefiniteIntegral
 {
+    // Многопоточная версия
     public static double Solve(double a, double b, Func<double, double> function, double step, int threadsNumber)
     {
         double totalResult = 0.0;
@@ -33,8 +34,13 @@ public class DefiniteIntegral
         }
 
         barrier.SignalAndWait();
-
         return totalResult;
+    }
+
+    // Однопоточная версия (без потоков вообще)
+    public static double SolveSingleThread(double a, double b, Func<double, double> function, double step)
+    {
+        return CalculateSegment(a, b, function, step);
     }
 
     private static double CalculateSegment(double a, double b, Func<double, double> f, double step)
