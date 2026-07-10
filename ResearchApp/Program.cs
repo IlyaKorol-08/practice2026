@@ -5,12 +5,10 @@ double SIN(double x) => Math.Sin(x);
 double a = -100, b = 100;
 int runs = 10;
 
-// Берём шаг, который даёт достаточную нагрузку
 double step = 1e-4;
 
 Console.WriteLine($"Исследование с шагом {step}\n");
 
-// Однопоточная версия
 Console.WriteLine("Однопоточная версия");
 var swSingle = Stopwatch.StartNew();
 for (int i = 0; i < runs; i++)
@@ -21,7 +19,6 @@ swSingle.Stop();
 double singleTime = swSingle.ElapsedMilliseconds / (double)runs;
 Console.WriteLine($"Время: {singleTime:F2} мс\n");
 
-// Подбор оптимального числа потоков
 Console.WriteLine("Подбор оптимального числа потоков");
 int[] threadCounts = { 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32 };
 var results = new List<(int threads, double time)>();
@@ -48,14 +45,12 @@ Console.WriteLine($"Однопоточная: {singleTime:F2} мс");
 Console.WriteLine($"Лучшая многопоточная: {bestMulti.threads} потоков, {bestMulti.time:F2} мс");
 Console.WriteLine($"Ускорение: {bestSpeedup:F1}%");
 
-// График
 var plt = new ScottPlot.Plot();
 double[] threadAxis = results.Select(r => (double)r.threads).ToArray();
 double[] timeAxis = results.Select(r => r.time).ToArray();
 
 plt.Add.Scatter(threadAxis, timeAxis);
 
-// Красная горизонтальная линия — однопоточное время
 var line = plt.Add.HorizontalLine(singleTime);
 line.Color = ScottPlot.Colors.Red;
 
@@ -65,7 +60,6 @@ plt.YLabel("Время (мс)");
 plt.SavePng("performance_graph.png", 800, 600);
 Console.WriteLine("График сохранён в performance_graph.png");
 
-// Отчёт
 string report = $@"
 Результаты исследования:
 Функция: sin(x)
