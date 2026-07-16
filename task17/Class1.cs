@@ -172,3 +172,30 @@ public class TestCommand : ICommand
 
     public void Execute() => _action();
 }
+
+public class RepeatedCommand : ICommand
+{
+    private readonly int _id;
+    private readonly int _maxCalls;
+    private readonly IScheduler _scheduler;
+    private int _counter;
+
+    public RepeatedCommand(int id, int maxCalls, IScheduler scheduler)
+    {
+        _id = id;
+        _maxCalls = maxCalls;
+        _scheduler = scheduler;
+        _counter = 0;
+    }
+
+    public void Execute()
+    {
+        _counter++;
+        Console.WriteLine($"Поток {_id} вызов {_counter}");
+
+        if (_counter < _maxCalls)
+        {
+            _scheduler.Add(this);
+        }
+    }
+}

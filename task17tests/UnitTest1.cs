@@ -147,4 +147,71 @@ public class ServerThreadTests
 
         Assert.True(timeline.Count > 0);
     }
+
+    [Fact]
+    public void FiveCommands_ThreeCalls_ThenHardStop()
+    {
+        var s = new RoundRobinScheduler();
+        var server = new ServerThread(s);
+
+        for (int id = 1; id <= 5; id++)
+        {
+            s.Add(new RepeatedCommand(id, 3, s));
+        }   
+
+        server.Enqueue(new HardStopCommand(server));
+
+        server.Start();
+        server.GetThread().Join(5000);
+
+        Assert.False(server.GetThread().IsAlive);
+    }
+
+    [Fact]
+    public void GenerateGraph19()
+    {
+        var s = new RoundRobinScheduler();
+        var server = new ServerThread(s);
+        var timeline = new List<(int Id, int Call, double Time)>();
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+
+        for (int id = 1; id <= 5; id++)
+        {
+            var cmdId = id;
+            var cmd = new LongRunningCommand(3, s, step =>
+                timeline.Add((cmdId, step, sw.Elapsed.TotalMilliseconds)));
+            server.Enqueue(cmd);
+        }
+        server.Enqueue(new SoftStopCommand(server));
+
+        server.Start();
+        server.GetThread().Join(10000);
+
+        var plt = new ScottPlot.Plot();
+        var colors = new[] {
+            ScottPlot.Colors.Red, ScottPlot.Colors.Blue, ScottPlot.Colors.Green,
+            ScottPlot.Colors.Orange, ScottPlot.Colors.Purple
+        };
+
+        for (int i = 0; i < 5; i++)
+        {
+            var data = timeline.Where(t => t.Id == i + 1).ToList();
+            if (data.Any())
+            {
+                var sc = plt.Add.Scatter(
+                    data.Select(d => d.Time).ToArray(),
+                    data.Select(d => (double)d.Call).ToArray());
+                sc.Color = colors[i];
+                sc.LegendText = $"Cmd{i + 1}";
+            }
+        }
+
+        plt.Title("Чередование 5 команд по 3 вызова");
+        plt.XLabel("Время (мс)");
+        plt.YLabel("Номер вызова");
+        plt.ShowLegend();
+        plt.SavePng("graph19.png", 800, 600);
+
+        Assert.True(timeline.Count > 0);
+    }
 }
