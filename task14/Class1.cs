@@ -33,8 +33,12 @@ public class DefiniteIntegral
         }
 
         barrier.SignalAndWait();
-
         return totalResult;
+    }
+
+    public static double SolveSingleThread(double a, double b, Func<double, double> function, double step)
+    {
+        return CalculateSegment(a, b, function, step);
     }
 
     private static double CalculateSegment(double a, double b, Func<double, double> f, double step)

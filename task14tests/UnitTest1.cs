@@ -1,6 +1,4 @@
-﻿using Xunit;
-using task14;
-using System;
+﻿using task14;
 
 public class DefiniteIntegralTests
 {
@@ -47,5 +45,17 @@ public class DefiniteIntegralTests
     {
         double result = DefiniteIntegral.Solve(0, Math.PI, SIN, 1e-5, 4);
         Assert.Equal(2.0, result, 3);
+    }
+
+    [Fact]
+    public void SingleThread_ReturnsSameResult_AsMultiThread()
+    {
+       double step = 1e-4;
+       int threads = 4;
+    
+       double multiResult = DefiniteIntegral.Solve(0, 5, X, step, threads);
+      double singleResult = DefiniteIntegral.SolveSingleThread(0, 5, X, step);
+    
+      Assert.Equal(singleResult, multiResult, 4);
     }
 }
