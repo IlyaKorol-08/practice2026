@@ -143,7 +143,7 @@ public class ServerThreadTests
         plt.XLabel("Время (мс)");
         plt.YLabel("Оставшиеся шаги");
         plt.ShowLegend();
-        plt.SavePng("graph.png", 800, 600);
+        plt.SavePng("../../../graph.png", 800, 600);
 
         Assert.True(timeline.Count > 0);
     }
