@@ -25,9 +25,25 @@ catch
 
 static void PrintAssemblyMetaData(Assembly assembly)
 {
-    var types = assembly.GetTypes()
-    .Where(t => t.IsClass && !t.IsAbstract)
-    .OrderBy(t => t.Name);
+    Type[] types;
+    try
+    {   
+        types = assembly.GetTypes()
+            .Where(t => t.IsClass && !t.IsAbstract)
+            .OrderBy(t => t.Name)
+            .ToArray();
+    }
+    catch (ReflectionTypeLoadException ex)
+    {
+        Console.WriteLine($"Ошибка загрузки типов: {ex.Message}");
+        types = ex.Types.Where(t => t != null).Cast<Type>().ToArray();
+    
+        foreach (var loaderEx in ex.LoaderExceptions)
+        {
+            if (loaderEx != null)
+                Console.WriteLine($"  - {loaderEx.Message}");
+        }
+    }
 
     foreach(var type in types)
     {
