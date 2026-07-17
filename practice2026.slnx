@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="PlaginRunner/PlaginRunner.csproj" />
   <Project Path="PluginLib/PluginLib.csproj" />
   <Project Path="task10tests/task10tests.csproj" />
 </Solution>
